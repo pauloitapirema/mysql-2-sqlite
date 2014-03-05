@@ -4,6 +4,9 @@ if [ "x$1" == "x" ]; then
   exit
 fi
 
+export LC_CTYPE=C 
+export LANG=C
+
 cat $1 |
 grep -v ' KEY "' |
 grep -v ' UNIQUE KEY "' |
